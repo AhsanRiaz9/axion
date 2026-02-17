@@ -3,12 +3,9 @@ mongoose.Promise    = global.Promise;
 
 module.exports = ({uri})=>{
   //database connection
-  mongoose.connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  mongoose.connect(uri);
 
-
+  mongoose.set('strictQuery', true);
   // When successfully connected
   mongoose.connection.on('connected', function () {
     console.log('💾  Mongoose default connection open to ' + uri);
