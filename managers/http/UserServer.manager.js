@@ -33,7 +33,7 @@ module.exports = class UserServer {
 
     setup(){
         app.use(cors({origin: '*'}));
-        app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+        app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
         app.use(express.json());
         app.use(express.urlencoded({ extended: true}));
         app.use('/static', express.static('public'));
