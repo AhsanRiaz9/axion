@@ -4,8 +4,8 @@ info:
   description: API for managing schools, classrooms, and students.
   version: 1.0.0
 servers:
-  - url: http://localhost:5111
-    description: Local server
+  - url: /
+    description: Deployed Server
 components:
   securitySchemes:
     bearerAuth:
