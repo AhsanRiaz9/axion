@@ -95,6 +95,45 @@ npm test
 
 ```
 
+# 🚀 Deploying to Railway
+
+Follow these steps to deploy your application from GitHub to [Railway](https://railway.app/).
+
+### 1. Initial Setup
+
+* Navigate to **Railway** and log in (or sign up using GitHub).
+* Click the **New Project** button in the top right corner.
+* Select **Deploy from GitHub Repo**.
+
+### 2. Repository Connection
+
+* Connect your GitHub account if you haven't already.
+* Search for and select the specific **repository** you wish to deploy.
+* Click **Deploy Now**.
+
+### 3. Configure Environment Variables
+
+If your app requires secrets or database strings, set them up before the build finishes:
+
+1. Go to the **Settings** tab.
+2. Navigate to the **Variables** section.
+3. Add your keys: According to .env
+
+> **Note:** Railway automatically injects a `PORT` variable. Ensure your code uses `process.env.PORT` to listen on the correct port.
+
+### 4. Build & Deployment
+
+* **Automatic Detection:** Railway identifies your `package.json` and automatically runs `npm install` and `npm start` (or your defined build scripts).
+* **Public URL:** Once the build status turns green, Railway generates a public URL located at the top of the project dashboard.
+
+---
+
+### 📚 Resources
+
+* [Railway Quick Start Docs](https://docs.railway.com/quick-start)
+
+Deployed URL: https://axion-production-39ad.up.railway.app/docs/
+
 ## 📖 API Documentation
 
 A comprehensive **Swagger** definition is available in the root directory (`swagger.yaml`). This file outlines all available endpoints, required headers for RBAC, and expected request/response schemas.
