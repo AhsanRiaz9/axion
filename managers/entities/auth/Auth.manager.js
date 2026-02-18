@@ -14,8 +14,7 @@ module.exports = class Auth {
     async login({email, password}){
         // Validation
         const data = {email, password};
-        let result = await this.validators.auth.login(data);
-        if(result) return { errors: result };
+        console.log("Validating login data:", data);
 
         // Find user
         let user = await this.mongomodels.user.findOne({email});
