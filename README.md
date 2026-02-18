@@ -61,7 +61,6 @@ Security is implemented through a granular permission system:
 
 * **Superadmin**: Global system access and school management.
 * **School Admin**: Management of teachers, students, and school-specific settings.
-* **Teacher/Student**: Restricted access to relevant academic resources.
 
 ---
 
@@ -102,3 +101,6 @@ A comprehensive **Swagger** definition is available in the root directory (`swag
 
 
 API Docs URL: http://localhost:5111/docs
+
+## Database Design
+![Database Design](database_design.png)
